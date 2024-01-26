@@ -1,5 +1,5 @@
 {
-  "name": "PicPals",
+  "name": "picpals",
   "version": "1.0.0",
   "description": "A photo app where you can chat with friends",
   "main": "server.js",
