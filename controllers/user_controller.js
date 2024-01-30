@@ -1,8 +1,8 @@
 //We create the user controller to do CRUD on data coming from the user model 
 const express = require('express')
 const router = express.Router()
-
 const User = require('../models/Post')
+router.use(express.json())
 
 router.use(express.urlencoded({extended: false}))
 

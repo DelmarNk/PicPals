@@ -1,0 +1,69 @@
+body{
+    background-color: rgba(128, 128, 128, 0.37);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main{
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    height: 100vh;
+    width: 390px;
+    height: 847px;
+    text-align: center;
+}
+.firsthalf{
+    display: block;
+    padding-top: 10px;
+}
+.app_name{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 70px;
+}
+.fill_in{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    height: 25px;
+    width: 230px;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.266);
+    border-radius: 5px;
+}
+.password{
+    position: relative;
+    top: -28px;
+}
+.login{
+    background-color: rgba(128, 128, 128, 0.266);
+    border-radius: 20px;
+    height: 25px;
+    width: 230px;
+    border: none;
+    font-size: large;
+}
+.secondhalf{
+    margin-top: -25px;
+    position: relative;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    color: blue;
+}
+.logo{
+    margin-top: 60px;
+    height: 200px;
+    width: 380px;
+}
+.line {
+    position: relative;
+    left: 30px;
+    margin-bottom: 30px;
+    width: 315px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.318);
+  }
