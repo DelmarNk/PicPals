@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="/styles/login.css">
 </head>
 <body>
-    <div class="main">
-        <div class="firsthalf">
+    <main>
+        <div class="login_section">
             <h1 class="app_name">PicPals</h1>
             <form action="/login" method="POST">
-                <input type="text" placeholder="Username or Email Adress" class="fill_in"><br>
-                <input type="text" placeholder="Password" class="fill_in password"><br>
-                <button type="submit" class="login">LOGIN</button>
+                <input type="text" placeholder="Username or Email Adress"><br>
+                <input type="text" placeholder="Password" class="password"><br>
+                <button type="submit" class="login_button">LOGIN</button>
             </form>
         </div>
-        <div class="secondhalf">
-            <div class="line"></div>
-            <p>Don't have an account? <a href="#">Register here</a></p>
+        <hr>
+        <div class="register_section">
+            <p>Don't have an account? <a href="/register">Register here</a></p>
             <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/80/9f/37/809f3732-e831-f03b-1441-f1e807a8b9a7/AppIcon-1x_U007emarketing-0-10-0-85-220.jpeg/1200x630wa.png" alt="logo" class="logo">
         </div>
-    </div>    
+    </main>    
 </body>
 </html>

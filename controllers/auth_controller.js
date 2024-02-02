@@ -1,6 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const User = require('../models/User')
+const bcrypt = require('bcrypt')
+
+router.use(express.urlencoded({extended: false}))
 
 router.get('/login', (req,res)=>{
     res.render('login.ejs')
@@ -12,15 +15,15 @@ router.get('/register', (req,res)=>{
 
 router.post('/register', async(req,res)=>{
     const userExists = await User.exists({email: req.body.email})
-
+    console.log(req.body)
     if(userExists){
-        res.send('This email is already used, please <a href="/login">login Here</a>')
+        return res.send('This email is already used, please <a href="/login">login Here</a>')
     }
     const salt = await bcrypt.genSalt(10)
     const hash = await bcrypt.hash(req.body.password, salt)
 
     req.body.password = hash
-    const newUser = await this.unsubscribe.create(req.body)
+    const newUser = await User.create(req.body)
 
     res.redirect('/login')
 })

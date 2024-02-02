@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="/styles/register.css">
+</head>
+<body>
+    <main>
+        <form action="/register" method="POST">
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Create a username">
+            <p>Email</p>
+            <input type="email" name="email" placeholder="Enter your email address">
+            <p>Birthday</p>
+            <input type="date" name="birthdate" id="birthdate">
+            <p>Photo</p>
+            <input type="text" name="photo" placeholder="Upload a profile picture">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Create a password">
+            <p>Confirm passsword</p>
+            <input type="password" name="password2" placeholder="Enter your password again">
+            <p>Bio</p>
+            <input type="text" name="bio" placeholder="Tell us more about yourself" class="bio"><br>
+            <button type="submit">Register</button>
+        </form>
+        <hr>
+        <div>
+            <p>Already have an account? <a href="/login">Login here</a></p>
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/80/9f/37/809f3732-e831-f03b-1441-f1e807a8b9a7/AppIcon-1x_U007emarketing-0-10-0-85-220.jpeg/1200x630wa.png" alt="logo" class="logo">
+        </div>
+    </main>
+</body>
+</html>
