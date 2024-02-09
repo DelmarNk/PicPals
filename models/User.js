@@ -8,7 +8,17 @@ const userSchema = new Schema({
   password: String,
   bio: String,
   birthdate: Date,
-}, {timestamps: true})
+}, {
+  timestamps: true,
+  toJSON: { virtuals: true },
+  toObject: { virtuals: true }
+})
 
-const User = mongoose.model('User', userSchema)
+userSchema.virtual('posts',{
+  ref: 'Post',
+  localField: '_id',
+  foreignField: 'user'
+});
+
+const User = mongoose.model('User', userSchema)//here 'User' is the model name
 module.exports = User

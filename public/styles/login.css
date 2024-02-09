@@ -11,8 +11,10 @@ main{
     padding-top: 10px;
 }
 .app_name{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: cursive;
     font-size: 70px;
+    font-style: oblique;
+    font-weight: lighter;
 }
 form{
     margin-bottom: 40px;

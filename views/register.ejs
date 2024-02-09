@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="/styles/register.css">
 </head>
 <body>
-    <main>
+    <div class="container">
+        <header>
+            <h1>PicPals</h1>
+            <h2>Fill in the form to start using PicPals</h2>
+            <p>Register with your email address</p>
+        </header>
+        <main>
         <form action="/register" method="POST">
             <p>Username</p>
             <input type="text" name="username" placeholder="Create a username">
@@ -25,11 +31,12 @@
             <input type="text" name="bio" placeholder="Tell us more about yourself" class="bio"><br>
             <button type="submit">Register</button>
         </form>
+        </main>
         <hr>
-        <div>
+        <footer>
             <p>Already have an account? <a href="/login">Login here</a></p>
             <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/80/9f/37/809f3732-e831-f03b-1441-f1e807a8b9a7/AppIcon-1x_U007emarketing-0-10-0-85-220.jpeg/1200x630wa.png" alt="logo" class="logo">
-        </div>
-    </main>
+        </footer>
+    </div>
 </body>
 </html>
