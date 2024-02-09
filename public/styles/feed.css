@@ -3,56 +3,45 @@ body{
     margin: 0;
 }
 .container{
-    background-color: white;
-    margin-left: 50px;
-    width: 390px;
-}
-.profile_info{
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-bottom: -50px;
+  background-color: white;
+  margin-left: 50px;
+  width: 390px;
 }
 
-h2,p{
-    position: relative;
-    left: 120px;
-    top: -80px;
-    font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
+.post{
+  z-index: 2;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+  position: relative;
+  left: 90px;
+  top: -5px;
+}
+
+.user_photo{
+  position: relative;
+  top: 55px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50px;
+  object-fit: cover ;
+}
+.image_post{
+    height: 400px;
+    width: 390px;
+    object-fit: cover ;
+    margin-bottom: -4px;
 }
 p{
-    width: 200px;
+  margin-bottom: -55px;
+  width: 200px;
+  height: 50px;
+  text-overflow: hidden;
 }
-.hr1{
-    position: relative;
-    margin-bottom: -7px;
-    margin-top: -5px;
-    left: 30px;
-    top: -80px;
-    width: 200px;
-}
-main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.image_container{
-    margin: 1px;
-    width: fit-content;
-}
-.post_image{
-    height: 120px;
-    width: 120px;
-    object-fit: cover ;
-    margin-bottom: -4px;
-}
-.profile_photo{
-    height: 100px;
-    width: 100px;
-    object-fit: cover ;
-    margin-bottom: -4px;
-    border-radius: 100px;
-}
+
+/* navigation css */
+
 nav{
     position: fixed;
     height: 60px;
@@ -67,15 +56,11 @@ nav{
     width: 50px;
     margin-left: 35px;
 }
-.hr2{
+hr{
     position: relative;
     width: 370px;
 
 }
-
-
-
-
 
 /* hambuger menu css */
 .navbar input[type="checkbox"],
@@ -90,32 +75,32 @@ nav{
     color: #000;
     opacity: 0.85;
     height: 50px;
-    z-index: 12;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 
 }
 .menu-items li {
     list-style: none;
-    margin-left: 1.5rem;
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
   }
 
 .menu-items a {
   text-decoration: none;
   color: #444;
   font-weight: 500;
-  transition: color 0.3s ease-in-out;
 }
 
-
 .menu-items a:hover {
-  color: brown;
-  transition: color 0.3s ease-in-out;
+    color: brown;
+    transition: color 0.3s ease-in-out;
 }
 
 @media (min-width: 500px) {
@@ -140,7 +125,7 @@ nav{
     height: 30px;
     width: 60px;
     top: 10px;
-    left: 280px;
+    left: 330px;
     z-index: 5;
     opacity: 0;
   }
@@ -151,7 +136,7 @@ nav{
     width: 35px;
     position: absolute;
     top: 17px;
-    left: 280px;
+    left: 330px;
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -194,16 +179,10 @@ nav{
     width: 200px;
   }
 
-  .navbar .menu-items li {
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-    font-weight: 300;
-  }
-
   .logo {
-    position: absolute;
-    top: -28px;
-    left: -25px;
+    position: relative;
+    top: -365px;
+    left: 20px;
     font-size: 2rem;
     font-family: cursive;
     font-style: oblique;
@@ -211,7 +190,7 @@ nav{
   }
 
   .navbar-container input[type="checkbox"]:checked ~ .menu-items {
-    transform: translateX(100px);
+    transform: translateX(150px);
   }
 
   .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
@@ -227,8 +206,3 @@ nav{
   }
 
 }
-
-
-
-
-
