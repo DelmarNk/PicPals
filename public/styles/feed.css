@@ -10,22 +10,25 @@ body{
 
 .post{
   z-index: 2;
-  margin-top: 10px;
+  margin-top: -35px;
   font-family: Arial, Helvetica, sans-serif;
 }
 h2{
   position: relative;
-  left: 90px;
-  top: -5px;
+  left: 100px;
+  top: 5px;
+  font-size: medium;
 }
 
 .user_photo{
   position: relative;
   top: 55px;
+  left: 10px;
   height: 80px;
   width: 80px;
   border-radius: 50px;
   object-fit: cover ;
+  margin-bottom: 10px;
 }
 .image_post{
     height: 400px;
@@ -35,6 +38,7 @@ h2{
 }
 p{
   margin-bottom: -55px;
+  margin-left: 10px;
   width: 370px;
   height: 50px;
   text-overflow: hidden;
@@ -56,7 +60,7 @@ nav{
     width: 50px;
     margin-left: 35px;
 }
-hr{
+.nav_divider{
     position: relative;
     width: 370px;
 
@@ -75,13 +79,12 @@ hr{
     color: #000;
     opacity: 0.85;
     height: 50px;
+    z-index: 2;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  z-index: 1;
-
 }
 .menu-items li {
     list-style: none;

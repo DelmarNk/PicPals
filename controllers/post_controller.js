@@ -8,7 +8,6 @@ router.use(express.urlencoded({extended: false}))
 
 router.get('/',async (req,res)=>{
     const data = {posts: await Post.find({}).sort({createdAt: -1}).populate("user")}
-    console.log(data.posts[0])
     res.render('feed.ejs', data)
 })
 
