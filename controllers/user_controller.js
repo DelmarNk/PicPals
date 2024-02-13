@@ -10,7 +10,7 @@ router.use(express.urlencoded({extended: false}))
 //Read route
 router.get('/:id', async(req,res)=>{
     const data = await User.findById(req.params.id).populate({path: 'posts', options: {sort: {"createdAt": -1}}})
-    res.render('profile.ejs', {profile: data})
+    res.render('profile.ejs', {profile: data, id: req.session.currentUser.id})
 })
 
 //delete route
