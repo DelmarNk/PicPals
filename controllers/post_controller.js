@@ -15,7 +15,7 @@ router.get('/',async (req,res)=>{
 })
 
 router.get('/new', (req,res)=>{
-    res.render('new.ejs')
+    res.render('new.ejs', {id:req.session.currentUser.id})
 })
 
 router.post('/new', async(req,res)=>{

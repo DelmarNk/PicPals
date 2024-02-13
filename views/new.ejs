@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head.ejs', {title: 'Create Post', css: ""}) %>
+<%- include('partials/head.ejs', {title: 'Create Post', css: "/styles/new.css"}) %>
 <body>
-    <form action="/post/new" method="POST">
-        <input type="text" name="image">
-        <input type="text" name="caption">
-        <input type="submit">
-    </form>
+    <div class="container">
+        <form action="/post/new" method="POST">
+            <input type="text" name="image">
+            <input type="text" name="caption">
+            <input type="submit">
+        </form>
+        <%- include('partials/nav.ejs', {id}) %>
+    </div>
 </body>
 </html>
