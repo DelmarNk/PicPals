@@ -8,8 +8,8 @@
         <div class="post">
             <%for(let i=0; i<posts.length; i++){%>
             <%let post = posts[i]%>
-            <img src="<%= post.user.photo %>" alt="user_photo" class="user_photo">
-            <h2><%= post.user.username %></h2>
+            <a href="/profile/<%= post.user._id %>"><img src="<%= post.user.photo %>" alt="user_photo" class="user_photo"></a>
+            <h2><a href="/profile/<%= post.user._id %>"><%= post.user.username %></a></h2>
             <img src="<%= post.image %>" alt="" class="image_post">
             <p><%= post.caption %></p>
             <%}%>
