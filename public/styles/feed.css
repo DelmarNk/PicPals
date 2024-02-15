@@ -1,4 +1,4 @@
-body{
+html, body{
     background-color: rgba(128, 128, 128, 0.37);
     margin: 0;
 }
@@ -8,7 +8,7 @@ body{
   width: 390px;
 }
 
-.post{
+ .post{
   z-index: 2;
   margin-top: -35px;
   font-family: Arial, Helvetica, sans-serif;
@@ -18,7 +18,7 @@ h2{
   left: 100px;
   top: 5px;
   font-size: medium;
-}
+} 
 
 .user_photo{
   position: relative;
@@ -42,7 +42,7 @@ p{
   width: 370px;
   height: 50px;
   text-overflow: hidden;
-}
+} 
 
 /* navigation css */
 
@@ -67,7 +67,7 @@ nav{
 }
 
 /* hambuger menu css */
-.navbar input[type="checkbox"],
+/* .navbar input[type="checkbox"],
 .navbar .hamburger-lines {
   display: none;
 }
@@ -208,6 +208,6 @@ nav{
     transform: rotate(-35deg);
   }
 
-}
+} */
 
 /* dots menu */

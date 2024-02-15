@@ -30,13 +30,9 @@ router.get('/:id/edit', async(req,res)=>{
     res.render('edit.ejs', data)
 })
 
-router.delete('/:id', async(req,res)=>{
+router.delete('/:id/delete', async(req,res)=>{
     await Post.findByIdAndDelete(req.params.id)
     res.redirect('/post')
 })
 
 module.exports = router
-
-
-
-

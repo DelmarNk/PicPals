@@ -10,6 +10,7 @@ const app = express()
 const auth_controller = require('./controllers/auth_controller')
 const user_controller = require('./controllers/user_controller')
 const post_controller = require('./controllers/post_controller')
+const chat_controller = require('./controllers/chat_controller')
 
 app.use(session({
     store: MongoStore.create({mongoUrl: process.env.MONGODB_CONNECTION}),
@@ -26,6 +27,7 @@ app.use(express.static('public'))
 app.use('/', auth_controller)
 app.use('/profile', user_controller)
 app.use('/post', post_controller)
+app.use('/chat', chat_controller)
 
 
 
