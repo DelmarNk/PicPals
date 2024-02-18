@@ -5,6 +5,8 @@ const Chat = require('../models/Chat')
 const Message = require('../models/Message')
 router.use(express.json())
 
+router.use(express.urlencoded({extended: false}))
+
 router.get('/:id', async(req,res)=>{
     let chat = await Chat.findOne().all('users', [req.params.id, req.session.currentUser.id]).populate('messages')
     if(!chat){
@@ -17,6 +19,7 @@ router.get('/:id', async(req,res)=>{
 router.post('/:id', async(req,res)=>{
     req.body['chat'] = req.params.id
     req.body['user'] = req.session.currentUser.id
+    console.log(req.body)
     const message = await Message.create(req.body)
 })
 

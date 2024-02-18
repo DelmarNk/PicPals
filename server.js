@@ -32,6 +32,13 @@ app.use('/chat', chat_controller)
 
 
 
-app.listen(PORT, ()=>{
+const server = app.listen(PORT, ()=>{
     console.log(`listening on port ${PORT}`)
+})
+const io = require('socket.io')(server)
+
+io.on('connection', (socket)=>{
+    socket.on('chat message', (msg)=>{
+        io.emit('chat message', msg)
+    })
 })
