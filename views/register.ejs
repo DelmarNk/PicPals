@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head.ejs', {title: 'Register Page', css: "/styles/register.css"}) %>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register Page</title>
+        <link rel="stylesheet" href="/styles/register.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    </head>
 <body>
     <div class="container">
         <header>
@@ -23,7 +29,7 @@
             <p>Confirm passsword</p>
             <input type="password" name="password2" placeholder="Enter your password again">
             <p>Bio</p>
-            <input type="text" name="bio" placeholder="Tell us more about yourself" class="bio"><br>
+            <textarea class="bio" name="name" placeholder="Tell us more about yourself..."></textarea><br>
             <button type="submit">Register</button>
         </form>
         </main>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat Page</title>
+        <link rel="stylesheet" href="/styles/chat.css">
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/chat/all"><img src="https://cdn-icons-png.freepik.com/512/130/130882.png" alt="" class="back_button"></a>
+            <img src="<%= profile.photo %>" alt="profile-photo" class="profile-photo">
+            <h2><%= profile.username %></h2>
+        </header>
+        <hr>
+        <main>
+            <ul class="messages">
+                <%if(chat.messages.length > 0){%>
+                    <%for(let i=0; i<chat.messages.length; i++){%>
+                        <% if(userId == chat.messages[i].user){ %>
+                            <li class="my_message"><%= chat.messages[i].content %></li>
+                            <p class="my_message_time time"><%= chat.messages[i].createdAt.toLocaleString()%></p>
+                        <% }else{ %>
+                            <li class="pal_message"><%= chat.messages[i].content %></li>
+                            <p class="time"><%= chat.messages[i].createdAt.toLocaleString()%></p>
+                        <%}%>
+                    <%}%>
+                <%}%>
+            </ul>
+            <form>
+                <input type="text" name="content" class="content">
+                <input type="image" src="https://static-00.iconduck.com/assets.00/send-icon-2048x2020-jrvk5f1r.png" class="submit">
+            </form>
+        </main>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>const chatId = <%- JSON.stringify(chat._id) %></script>
+        <script src="/scripts/chat_server.js" type='text/javascript'></script>
+    </div>
+</body>
+</html>

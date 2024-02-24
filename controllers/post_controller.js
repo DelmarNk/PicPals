@@ -7,15 +7,19 @@ router.use(express.json())
 router.use(express.urlencoded({extended: false}))
 
 router.get('/',async (req,res)=>{
-    const data = {posts: await Post.find({}).sort({createdAt: -1}).populate("user")}
-    res.render('feed.ejs', data)
+    const data = await Post.find({}).sort({createdAt: -1}).populate("user")
+    res.render('feed.ejs', {
+        posts: data,
+        id: req.session.currentUser.id
+    })
 })
 
 router.get('/new', (req,res)=>{
-    res.render('new.ejs')
+    res.render('new.ejs', {id:req.session.currentUser.id})
 })
 
-router.post('/', async(req,res)=>{
+router.post('/new', async(req,res)=>{
+    req.body['user'] = req.session.currentUser.id
     await Post.create(req.body)
     res.redirect('/post')
 })
@@ -26,13 +30,9 @@ router.get('/:id/edit', async(req,res)=>{
     res.render('edit.ejs', data)
 })
 
-router.delete('/:id', async(req,res)=>{
+router.delete('/:id/delete', async(req,res)=>{
     await Post.findByIdAndDelete(req.params.id)
     res.redirect('/post')
 })
 
 module.exports = router
-
-
-
-

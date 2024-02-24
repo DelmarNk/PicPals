@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All messages</title>
+    <link rel="stylesheet" href="/styles/messages.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+</head>
+<body>
+    <div class="container">
+        <h2>My Messages</h2>
+        <hr class="top_part">
+        <div class="message_block">
+            <%for(let i=0; i<messageData.length; i++){%>
+                <%let sms = messageData[i]%>
+                <%if(sms.message[0]){%>
+                    <a href="/chat/<%=sms.id %>">
+                        <img src="<%= sms.photo %>" alt="user_photo" class="user_photo">
+                        <p class="content"><%= sms.message[0].content %></p>
+                        <h1><%= sms.username %></h1>
+                        <p class="time"><%= sms.message[0].createdAt.toLocaleString()%></p>
+                        <hr class="message_divider">
+                    </a>
+                <%}%>
+            <%}%>
+        </div>
+        <%- include('partials/nav.ejs', {id}) %>
+    </div>
+</body>
+</html>

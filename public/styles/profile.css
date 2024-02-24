@@ -3,9 +3,10 @@ body{
     margin: 0;
 }
 .container{
-    background-color: white;
-    margin-left: 50px;
+    background-color: rgb(253, 249, 243);
     width: 390px;
+    margin-left: 10px;
+    min-height: 1000px;
 }
 .profile_info{
     margin-top: 20px;
@@ -15,42 +16,49 @@ body{
 
 h2,p{
     position: relative;
-    left: 120px;
+    left: 100px;
     top: -80px;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
+h2{
+  color: rgb(67, 51, 38);
+}
 p{
-  width: 200px;
+  width: 230px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 .hr1{
     position: relative;
     margin-bottom: -7px;
     margin-top: -5px;
-    left: 30px;
+    left: 28px;
     top: -80px;
-    width: 200px;
+    width: 240px;
 }
 main{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    padding-bottom: 100px;
 }
 .image_container{
-    margin: 1px;
+    margin: 0.5px;
     width: fit-content;
+    display: flex;
 }
 .post_image{
-    height: 120px;
-    width: 120px;
+    height: 128.5px;
+    width: 128.5px;
     object-fit: cover ;
-    margin-bottom: -4px;
 }
 .profile_photo{
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     object-fit: cover ;
-    margin-bottom: -4px;
+    margin-bottom: 0px;
     border-radius: 100px;
 }
 nav{
@@ -72,7 +80,42 @@ nav{
     width: 370px;
 }
 
+.icon-bar{
+  position: relative;
+  top: -15px;
+  left: 132px;
+  width: 30px;
+  height: 3px;
+  background-color: rgb(161, 197, 224);
+  border: none;
+}
+.message{
+  position: relative;
+  text-decoration: none;
+  top: -70px;
+  left: 270px;
+  color: white;
+  padding: 5px 20px 5px 20px;
+  background-color: rgba(109, 103, 224);
+  border-radius: 20px;
+}
+.message:hover{
+  color: black;
+  background-color: rgba(109, 103, 224, 0.815);
+  box-shadow: 0px 4px 4px 0px rgba(128, 128, 128, 0.443);
+  transition: all 0.8s ease 0s;
+}
 
+
+.app_name{
+  font-family: "Pacifico";
+  color: rgb(67, 51, 38);
+  font-size: 40px;
+  font-style: oblique;
+  font-weight: lighter;
+  margin-top: -20px;
+  margin-bottom: -10px;
+}
 
 
 
