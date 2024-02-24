@@ -16,7 +16,7 @@
             <%let post = posts[i]%>
             <a href="/profile/<%= post.user._id %>"><img src="<%= post.user.photo %>" alt="user_photo" class="user_photo"></a>
             <h2><a href="/profile/<%= post.user._id %>"><%= post.user.username %></a></h2>
-            <img src="<%= post.image %>" alt="" class="image_post">
+            <a href="/post/<%=post_.id%>"><img src="<%= post.image %>" alt="" class="image_post"></a>
             <p><%= post.caption %></p>
             <%}%>
         </div>

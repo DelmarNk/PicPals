@@ -25,11 +25,12 @@ router.post('/new', async(req,res)=>{
 })
 
 router.get('/:id', async(req,res)=>{
-    const theImage = await Post.findById(req.params.id)
+    const thePost = await Post.findById(req.params.id)
     if(image == undefined){
         next()
     }
-    const data = {image: theImage, id: req.params.id}
+    const data = {post: thePost, id: req.params.id}
+    console.log(data)
     res.render('show.ejs, data')
 }, (req,res)=>{
     const data = {error: req.error}
