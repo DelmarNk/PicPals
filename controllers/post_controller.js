@@ -24,15 +24,17 @@ router.post('/new', async(req,res)=>{
     res.redirect('/post')
 })
 
-router.get('/:id/edit', async(req,res)=>{
-    const allPosts = await Post.findById(req.params.id)
-    const data = {post: allPosts, id: req.params.id}
-    res.render('edit.ejs', data)
-})
-
-router.delete('/:id/delete', async(req,res)=>{
-    await Post.findByIdAndDelete(req.params.id)
-    res.redirect('/post')
-})
+router.get('/:id', async(req,res)=>{
+    const theImage = await Post.findById(req.params.id)
+    if(image == undefined){
+        next()
+    }
+    const data = {image: theImage, id: req.params.id}
+    res.render('show.ejs, data')
+}, (req,res)=>{
+    const data = {error: req.error}
+    res.status(404).render('404.ejs', data)
+}
+)
 
 module.exports = router
