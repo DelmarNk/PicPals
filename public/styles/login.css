@@ -1,9 +1,10 @@
 body{
     background-color: rgba(128, 128, 128, 0.37);
+    margin-top: 0px;
 }
 
 main{
-    background-color: white;
+    background-color: rgb(253, 249, 243);
     width: 390px;
     text-align: center;
 }
@@ -11,7 +12,8 @@ main{
     padding-top: 10px;
 }
 .app_name{
-    font-family: cursive;
+    font-family: "Pacifico";
+    color: rgb(67, 51, 38);
     font-size: 70px;
     font-style: oblique;
     font-weight: lighter;
@@ -25,17 +27,26 @@ input{
     height: 25px;
     width: 260px;
     border: none;
-    background-color: rgba(128, 128, 128, 0.266);
+    background-color: white;
     border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(128, 128, 128, 0.443) inset;
+    border: solid 0.1px rgba(170, 170, 170, 0.545);
 }
 .login_button{
-    background-color: rgba(128, 128, 128, 0.266);
+    background-color: rgba(109, 103, 224);
+    color: white;
     border-radius: 20px;
     height: 25px;
     width: 270px;
     border: none;
     font-size: large;
     margin-top: 20px;
+}
+.login_button:hover{
+    color: black;
+    background-color: rgba(109, 103, 224, 0.815);
+    box-shadow: 0px 4px 4px 0px rgba(128, 128, 128, 0.443);
+    transition: all 0.8s ease 0s;
 }
 .register_section{
     font-size: 13px;

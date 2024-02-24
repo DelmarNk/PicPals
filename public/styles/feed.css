@@ -1,48 +1,66 @@
-html, body{
+body{
     background-color: rgba(128, 128, 128, 0.37);
     margin: 0;
 }
 .container{
-  background-color: white;
-  margin-left: 50px;
+  background-color: rgb(253, 249, 243);
   width: 390px;
+  margin-left: 10px;
 }
 
  .post{
   z-index: 2;
-  margin-top: -35px;
   font-family: Arial, Helvetica, sans-serif;
 }
 h2{
   position: relative;
-  left: 100px;
-  top: 5px;
-  font-size: medium;
+  left: 70px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
 } 
+a{
+  text-decoration: none;
+  color: rgb(67, 51, 38);
+  cursor: pointer;
+}
 
 .user_photo{
   position: relative;
   top: 55px;
   left: 10px;
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
   border-radius: 50px;
   object-fit: cover ;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .image_post{
     height: 400px;
     width: 390px;
     object-fit: cover ;
-    margin-bottom: -4px;
+    margin-bottom: -12px;
 }
 p{
-  margin-bottom: -55px;
+  margin-bottom: -20px;
   margin-left: 10px;
   width: 370px;
-  height: 50px;
-  text-overflow: hidden;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+  color: #272727;
 } 
+
+.app_name{
+  font-family: "Pacifico";
+  color: rgb(67, 51, 38);
+  font-size: 40px;
+  font-style: oblique;
+  font-weight: lighter;
+  margin-top: -20px;
+  margin-bottom: -50px;
+}
 
 /* navigation css */
 
@@ -63,7 +81,15 @@ nav{
 .nav_divider{
     position: relative;
     width: 370px;
-
+}
+.icon-bar{
+  position: relative;
+  top: -15px;
+  left: -135px;
+  width: 30px;
+  height: 3px;
+  background-color: rgb(161, 197, 224);
+  border: none;
 }
 
 /* hambuger menu css */

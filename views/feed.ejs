@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head.ejs', {title: 'Feed Page', css: "/styles/feed.css"}) %>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feed Page</title>
+        <link rel="stylesheet" href="/styles/feed.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    </head>
 <body>
     <div class="container">
 <!-- <%- include('partials/settings.ejs') %> -->
-        
+    <h1 class="app_name">PicPals</h1>
         <div class="post">
             <%for(let i=0; i<posts.length; i++){%>
             <%let post = posts[i]%>

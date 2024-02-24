@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head.ejs', {title: 'Profile Page', css: "/styles/profile.css"}) %>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile Page</title>
+        <link rel="stylesheet" href="/styles/profile.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    </head>
 <body>
     <div class="container">
-        <%- include('partials/settings.ejs') %>
+        <!-- <%- include('partials/settings.ejs') %> -->
+        <h1 class="app_name">PicPals</h1>
         <div class="profile_info">
             <img src="<%= profile.photo %>" alt="profile_photo" class="profile_photo">
             <h2><%= profile.username %></h2>
             <hr class="hr1">
             <p><%= profile.bio %></p>
-            <a href="/chat/<%= profile._id %>">Message</a>
+            <% if(profile._id != id){ %>
+                <a href="/chat/<%= profile._id %>" class="message">Message</a>
+            <%}%>
         </div>
         <main>
             <% for(let i=0; i<profile.posts.length; i++){%>

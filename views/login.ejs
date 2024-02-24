@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head.ejs', {title: 'Login Page', css: "/styles/login.css"}) %>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Page</title>
+        <link rel="stylesheet" href="/styles/login.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    </head>
 <body>
     <main>
         <div class="login_section">
             <h1 class="app_name">PicPals</h1>
             <form action="/login" method="POST">
-                <input type="email" name="email" placeholder="Username or Email Adress"><br>
+                <input type="email" name="email" placeholder="Email Adress"><br>
                 <input type="password" name="password" placeholder="Password" class="password"><br>
                 <button type="submit" class="login_button">LOGIN</button>
             </form>

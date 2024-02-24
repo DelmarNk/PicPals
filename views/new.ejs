@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head.ejs', {title: 'Create Post', css: "/styles/new.css"}) %>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New</title>
+        <link rel="stylesheet" href="/styles/new.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+    </head>
 <body>
     <div class="container">
+        <h1 class="app_name">PicPals</h1>
+        <p>Share a new Pic with all your Pals</p>
         <form action="/post/new" method="POST">
-            <input type="text" name="image">
-            <input type="text" name="caption">
-            <input type="submit">
+            <input type="text" name="image" class="image"><br>
+            <p class="caption_text">Add a caption to your post:</p>
+            <textarea class="caption" name="name" placeholder="Share something about your post..."></textarea><br>
+            <input type="submit" class="submit" placeholder="create your post">
         </form>
         <%- include('partials/nav.ejs', {id}) %>
     </div>
