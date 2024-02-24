@@ -29,6 +29,13 @@ app.use('/profile', user_controller)
 app.use('/post', post_controller)
 app.use('/chat', chat_controller)
 
+app.get('/', (req,res)=>{
+    res.redirect('/login')
+})
+
+app.get('/*', (req,res)=>{
+    res.render('404.ejs')
+})
 
 
 
