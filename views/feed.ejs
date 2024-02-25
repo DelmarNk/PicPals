@@ -10,14 +10,16 @@
 <body>
     <div class="container">
 <!-- <%- include('partials/settings.ejs') %> -->
-    <h1 class="app_name">PicPals</h1>
-        <div class="post">
+        <h1 class="app_name">PicPals</h1>
+        <div class="posts">
             <%for(let i=0; i<posts.length; i++){%>
             <%let post = posts[i]%>
-            <a href="/profile/<%= post.user._id %>"><img src="<%= post.user.photo %>" alt="user_photo" class="user_photo"></a>
-            <h2><a href="/profile/<%= post.user._id %>"><%= post.user.username %></a></h2>
-            <img src="<%= post.image %>" alt="" class="image_post">
-            <p><%= post.caption %></p>
+            <div class="post">
+                <a href="/profile/<%= post.user._id %>"><img src="<%= post.user.photo %>" alt="user_photo" class="user_photo"></a>
+                <h2><a href="/profile/<%= post.user._id %>"><%= post.user.username %></a></h2>
+                <img src="<%= post.image %>" alt="" class="image_post">
+                <p><%= post.caption %></p>
+            </div>
             <%}%>
         </div>
         <%- include('partials/nav.ejs', {id}) %>

@@ -1,16 +1,19 @@
 body{
-    background-color: rgba(128, 128, 128, 0.37);
+    background-color: rgb(253, 249, 243);
     margin: 0;
 }
 .container{
-  background-color: rgb(253, 249, 243);
-  width: 390px;
-  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
- .post{
-  z-index: 2;
+ .posts{
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 h2{
   position: relative;
@@ -35,9 +38,9 @@ a{
   margin-bottom: 20px;
 }
 .image_post{
-    height: 400px;
-    width: 390px;
     object-fit: cover ;
+    width: 100%;
+    aspect-ratio: 1/1;
     margin-bottom: -12px;
 }
 p{
@@ -45,9 +48,9 @@ p{
   margin-left: 10px;
   width: 370px;
   overflow: hidden;
-  display: -webkit-box;
+  display: -webkit-box; 
   -webkit-line-clamp: 3; /* number of lines to show */
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical; 
   font-size: 14px;
   color: #272727;
 } 
@@ -62,35 +65,47 @@ p{
   margin-bottom: -50px;
 }
 
+@media screen and (max-width: 600px){
+  .image_post{
+    width: 100vw;
+  }
+}
+@media screen and (min-width: 600px){
+  .image_post{
+    max-width: 400px;
+  }
+}
+
 /* navigation css */
 
 nav{
+  background-color: rgb(253, 249, 243);
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 60px;
     bottom: 0;
-    width: 390px;
-    background-color: #fff;
+    width: 100%;
     margin-top: 30px;
     padding-bottom: 10px;
 }
+.icon-tags{
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 600px;
+  width: 100%;
+}
+
 .icon{
     height: 50px;
     width: 50px;
-    margin-left: 35px;
 }
 .nav_divider{
     position: relative;
-    width: 370px;
-}
-.icon-bar{
-  position: relative;
-  top: -15px;
-  left: -135px;
-  width: 30px;
-  height: 3px;
-  background-color: rgb(161, 197, 224);
-  border: none;
-}
+    min-width: 380px;
+} 
+
 
 /* hambuger menu css */
 /* .navbar input[type="checkbox"],

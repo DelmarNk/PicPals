@@ -13,15 +13,6 @@ router.get('/:id', async(req,res)=>{
     res.render('profile.ejs', {profile: data, id: req.session.currentUser.id})
 })
 
-//delete route
-router.delete('/:id', async(req,res)=>{
-    const data = await User.findByIdAndDelete(req.params.id)
-    res.redirect('/profile')
-})
-//update
-router.put('/:id', async(req,res)=>{
-    const data = await User.findByIdAndUpdate(req.params.id, req.body)
-    res.redirect('/profile')
-})
+
 
 module.exports = router
