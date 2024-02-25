@@ -39,7 +39,7 @@ a{
 }
 .image_post{
     object-fit: cover ;
-    width: 100%;
+    width: 98%;
     aspect-ratio: 1/1;
     margin-bottom: -12px;
 }
@@ -67,7 +67,7 @@ p{
 
 @media screen and (max-width: 600px){
   .image_post{
-    width: 100vw;
+    width: 98vw;
   }
 }
 @media screen and (min-width: 600px){
