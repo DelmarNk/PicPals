@@ -1,12 +1,11 @@
 body{
     background-color: rgb(253, 249, 243);
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
  .posts{
   font-family: Arial, Helvetica, sans-serif;
@@ -59,10 +58,10 @@ p{
   font-family: "Pacifico";
   color: rgb(67, 51, 38);
   font-size: 40px;
-  font-style: oblique;
   font-weight: lighter;
   margin-top: -20px;
   margin-bottom: -50px;
+  margin-left: -330px;
 }
 
 @media screen and (max-width: 600px){
@@ -72,7 +71,7 @@ p{
 }
 @media screen and (min-width: 600px){
   .image_post{
-    max-width: 400px;
+    max-width: 500px;
   }
 }
 
@@ -88,7 +87,7 @@ nav{
     bottom: 0;
     width: 100%;
     margin-top: 30px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 .icon-tags{
   display: flex;
@@ -103,7 +102,8 @@ nav{
 }
 .nav_divider{
     position: relative;
-    min-width: 380px;
+    width: 98%;
+    max-width: 500px;
 } 
 
 
