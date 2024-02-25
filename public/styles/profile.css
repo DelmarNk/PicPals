@@ -96,9 +96,9 @@ nav{
 }
 .nav_divider{
   position: relative;
-  min-width: 380px;
+  width: 98%;
+  max-width: 500px;
 } 
-
 
 .message{
   position: relative;
