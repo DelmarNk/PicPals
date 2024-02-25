@@ -1,13 +1,10 @@
 body{
-    background-color: rgba(128, 128, 128, 0.37);
+    background-color: rgb(253, 249, 243);
     margin-top: 0px;
+    text-align: center;
+
 }
 
-main{
-    background-color: rgb(253, 249, 243);
-    width: 390px;
-    text-align: center;
-}
 .login_section{
     padding-top: 10px;
 }

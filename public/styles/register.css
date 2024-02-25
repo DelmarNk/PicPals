@@ -1,17 +1,13 @@
 body{
-    background-color: rgba(128, 128, 128, 0.37);
+    background-color: rgb(253, 249, 243);
     margin-top: 0px;
 }
 .container{
-    background-color: rgb(253, 249, 243);
-    width: 390px;
-    margin-top: 0px;
+    text-align: center;
 }
 header{
     padding-top: 1px;
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
     margin-bottom: -20px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -28,8 +24,11 @@ main{
 }
 form{
     position: relative;
-    left: 40px;
-    padding-top: 40px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 input, .bio{
     padding-left: 10px;
@@ -44,9 +43,11 @@ input, .bio{
 .bio{
     padding-top: 10px;
 }
-p{
+.texts{
     position: relative;
     top: 10px;
+    text-align: left;
+    width: 300px;
 }
 .bio{
     height: 100px;

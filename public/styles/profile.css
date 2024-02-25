@@ -1,12 +1,9 @@
 body{
-    background-color: rgba(128, 128, 128, 0.37);
+    background-color: rgb(253, 249, 243);
     margin: 0;
 }
 .container{
-    background-color: rgb(253, 249, 243);
     width: 390px;
-    margin-left: 10px;
-    min-height: 1000px;
 }
 .profile_info{
     margin-top: 20px;
@@ -65,7 +62,7 @@ nav{
     position: fixed;
     height: 60px;
     bottom: 0;
-    width: 390px;
+    width: 100%;
     background-color: #fff;
     margin-top: 30px;
     padding-bottom: 10px;
@@ -80,7 +77,7 @@ nav{
     width: 370px;
 }
 
-.icon-bar{
+/* .icon-bar{
   position: relative;
   top: -15px;
   left: 132px;
@@ -88,7 +85,7 @@ nav{
   height: 3px;
   background-color: rgb(161, 197, 224);
   border: none;
-}
+} */
 .message{
   position: relative;
   text-decoration: none;

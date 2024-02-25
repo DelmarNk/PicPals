@@ -1,16 +1,15 @@
 body{
-    background-color: rgba(128, 128, 128, 0.37);
+    background-color: rgb(253, 249, 243);
     margin: 0;
 }
 .container{
-  background-color: rgb(253, 249, 243);
-  width: 390px;
-  margin-left: 10px;
+  width: max-content;
 }
 
  .post{
   z-index: 2;
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 150px;
 }
 h2{
   position: relative;
@@ -36,8 +35,8 @@ a{
 }
 .image_post{
     height: 400px;
-    width: 390px;
     object-fit: cover ;
+    min-width: 390px;
     margin-bottom: -12px;
 }
 p{
@@ -66,9 +65,12 @@ p{
 
 nav{
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     height: 60px;
     bottom: 0;
-    width: 390px;
+    width: 100%;
     background-color: #fff;
     margin-top: 30px;
     padding-bottom: 10px;
@@ -76,21 +78,12 @@ nav{
 .icon{
     height: 50px;
     width: 50px;
-    margin-left: 35px;
 }
 .nav_divider{
     position: relative;
     width: 370px;
 }
-.icon-bar{
-  position: relative;
-  top: -15px;
-  left: -135px;
-  width: 30px;
-  height: 3px;
-  background-color: rgb(161, 197, 224);
-  border: none;
-}
+
 
 /* hambuger menu css */
 /* .navbar input[type="checkbox"],

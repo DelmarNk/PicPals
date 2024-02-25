@@ -24,7 +24,7 @@
             <% for(let i=0; i<profile.posts.length; i++){%>
                 <%let post = profile.posts[i]%>
                 <div class="image_container">
-                    <img src="<%= post.image %>" alt="" class="post_image">
+                    <a href="/post/<%=post_.id%>"></a><img src="<%= post.image %>" alt="" class="post_image"></a>
                 </div>
             <%}%>
         </main>
