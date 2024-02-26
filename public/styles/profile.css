@@ -57,9 +57,15 @@ main{
   .main{
     width: 99vw;
   }
+  .topnav{
+    width: 100%;
+  }
 }
 @media screen and (min-width: 600px){
   .container{
+    width: 500px;
+  }
+  .topnav{
     width: 500px;
   }
 }
@@ -123,7 +129,6 @@ nav{
   overflow: hidden;
   background-color: rgb(253, 249, 243);
   position: fixed;
-  width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
