@@ -115,13 +115,14 @@ nav{
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   z-index: 2;
-  display: flex;
-  justify-content: space-between;
 }
 
 .topnav #myLinks {
   background-color: rgb(161, 197, 224);
   display: none;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  z-index: 2;
 }
 
 .topnav a {
