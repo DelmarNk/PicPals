@@ -115,6 +115,8 @@ nav{
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   z-index: 2;
+  display: flex;
+  justify-content: space-between;
 }
 
 .topnav #myLinks {

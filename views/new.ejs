@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
     </head>
 <body>
+    <%- include('partials/settings.ejs') %>
     <div class="container">
-        <h1 class="app_name">PicPals</h1>
         <p>Share a new Pic with all your Pals</p>
         <form action="/post/new" method="POST">
             <input type="text" name="image" class="image"><br>
@@ -17,7 +17,7 @@
             <textarea class="caption" name="name" placeholder="Share something about your post..."></textarea><br>
             <input type="submit" class="submit" placeholder="create your post">
         </form>
-        <%- include('partials/nav.ejs', {id}) %>
     </div>
+    <%- include('partials/nav.ejs', {id}) %>
 </body>
 </html>

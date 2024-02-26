@@ -53,7 +53,7 @@ main{
     object-fit: cover;
     margin: 0.5px;
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
   .main{
     width: 99vw;
   }
@@ -61,7 +61,7 @@ main{
     width: 100%;
   }
 }
-@media screen and (min-width: 600px){
+@media screen and (min-width: 601px){
   .container{
     width: 500px;
   }
@@ -133,6 +133,8 @@ nav{
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   z-index: 2;
+  display: flex;
+  justify-content: space-between;
 }
 
 .topnav #myLinks {
