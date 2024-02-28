@@ -1,4 +1,4 @@
-<div class="navbar">
+<!-- <div class="navbar">
     <div class="navbar-container">
         <input type="checkbox" name="" id="">
         <div class="hamburger-lines">
@@ -15,25 +15,27 @@
         </ul>
         <h1 class="logo">PicPals</h1>
     </div>
-</div>
+</div> -->
 
-<!-- 
-<nav class="navbar">
-    <div class="container-fluid">
-        <h1 class="navbar-brand">PicPals</h1>
-        <button class="navbar-toggler btn btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <ul class="menu-items">
-                <li><a href="#edit">Edit profile</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Help</a></li>
-                <li><a href="#photo">Update profile picture</a></li>
-                <li><a href="/logout">Logout</a></li>
-            </ul>
-        </div>
-
+<div class="topnav">
+    <h1 class="app_name">PicPals</h1>
+    <div id="myLinks">
+      <a href="#settings">Settings</a>
+      <a href="#about">about</a>
+      <a href="/logout">logout</a>
     </div>
-</nav> -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <!-- <i class="fa fa-bars"></i> -->
+        <img class="hamburger_lines" src="https://cdn.icon-icons.com/icons2/2596/PNG/512/hamburger_button_menu_icon_155296.png" alt="">
+    </a>
+</div>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+</script>
