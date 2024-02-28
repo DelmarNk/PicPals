@@ -17,17 +17,17 @@
         <main>
         <form action="/register" method="POST">
             <p class="texts">Username</p>
-            <input type="text" name="username" placeholder="Create a username">
+            <input type="text" name="username" placeholder="Create a username" required>
             <p class="texts">Email</p>
-            <input type="email" name="email" placeholder="Enter your email address">
+            <input type="email" name="email" placeholder="Enter your email address" required>
             <p class="texts">Birthday</p>
             <input type="date" name="birthdate" id="birthdate">
             <p class="texts">Photo</p>
-            <input type="text" name="photo" placeholder="Upload a profile picture">
+            <input type="text" name="photo" placeholder="Upload a profile picture" required>
             <p class="texts">Password</p>
-            <input type="password" name="password" placeholder="Create a password">
+            <input type="password" name="password" placeholder="Create a password" required>
             <p class="texts">Confirm passsword</p>
-            <input type="password" name="password2" placeholder="Enter your password again">
+            <input type="password" name="password2" placeholder="Enter your password again" required>
             <p class="texts">Bio</p>
             <textarea class="bio" name="name" placeholder="Tell us more about yourself..."></textarea><br>
             <button type="submit">Register</button>
